@@ -14,13 +14,14 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
 ?>
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
-    <link rel="stylesheet" href="task-1.css
-    ">
+    <link rel="stylesheet" href="../css/task-1.css">
 </head>
+
 <body>
     <form action="task-1.php" method="POST" enctype="multipart/form-data">
         <div class="input-group">

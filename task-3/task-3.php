@@ -7,7 +7,7 @@ include("./backend-3.php")
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
-    <link rel="stylesheet" href="./task-3.css">
+    <link rel="stylesheet" href="../css/task-3.css">
 </head>
 <body>
 <form action="task-3.php" method="POST" enctype="multipart/form-data">

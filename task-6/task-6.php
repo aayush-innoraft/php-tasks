@@ -4,7 +4,6 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
     $lastName = trim($_POST["last-name"]);
     $phoneno = trim($_POST["pnumber"]);
     $email = trim($_POST["email"]);
-   
         $filename = "newfile.txt"; 
         $txt = "Firstname: $firstName\n" .
                "Lastname: $lastName\n" .
@@ -16,13 +15,12 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
         readfile($filename);
 
     }
-
 ?>
 <!DOCTYPE html>
 <html lang="en">
 <head>
   <title>Document</title>
-  <link rel="stylesheet" href="./task-6.css">
+  <link rel="stylesheet" href="../css/task-6.css">
 </head>
 <body>
   <form action="task-6.php" method="POST" enctype="multipart/form-data">

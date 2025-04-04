@@ -7,7 +7,7 @@ include("./backend5.php")
 
 <head>
   <title>Document</title>
-  <link rel="stylesheet" href="./task-5.css">
+  <link rel="stylesheet" href="../css/task-5.css">
 </head>
 
 <body>

@@ -8,7 +8,7 @@ include("./backend.php");
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Document</title>
-  <link rel="stylesheet" href="task-2.css">
+  <link rel="stylesheet" href="../css/task-2.css">
 </head>
 <body>
   <form action="task-2.php" method="POST" enctype="multipart/form-data">

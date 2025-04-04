@@ -1,42 +1,63 @@
-
-* {
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
-}
+/* style.css */
 
 body {
-    font-family: Arial, sans-serif;
-    background-color: #f4f4f4;
-    padding: 40px;
+    margin: 0;
+    padding: 0;
+    background: linear-gradient(135deg, #ffffff, #3399ff);
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
 }
 
 .container {
+    background-color: #ffffff;
+    padding: 40px 100px;
+    border-radius: 15px;
+    box-shadow: 0 0 20px #3399ff;
     display: flex;
     flex-direction: column;
-    align-items: flex-start;
-    gap: 15px;
-    background-color: #ffffff;
-    padding: 20px 30px;
-    max-width: 300px;
-    border-radius: 10px;
-    box-shadow: 0 4px 8px rgba(0,0,0,0.1);
-    margin: 0 auto;
+    gap: 20px;
+  
 }
+.welcome {
+    position: absolute;
+    top: 20px;
+    left: 20px;
+    background-color: #3399ff;
+    color: white;
+    padding: 10px 20px;
+    border-radius: 8px;
+    font-weight: bold;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+}
+
 
 .container a {
     text-decoration: none;
-    color: #2c3e50;
-    background-color: #ecf0f1;
-    padding: 10px 15px;
-    border-radius: 5px;
-    transition: all 0.3s ease;
-    font-weight: bold;
-    width: 100%;
+    background-color: #3399ff;
+    color: white;
+    padding: 20px 30px;
+    border-radius: 8px;
     text-align: center;
+    font-weight: bold;
+    transition: background-color 0.3s ease;
+    box-shadow: 0 0 10px rgba(0, 102, 204, 0.5);
+    font-size: 30px;
 }
 
 .container a:hover {
-    background-color: #3498db;
-    color: white;
+    background-color: #1a75ff;
+    box-shadow: 0 0 15px rgba(0, 102, 204, 0.8);
+}
+button{
+    position: absolute;
+    right: 50px;
+    top: 30px;
+    padding: 20px;
+    background-color: red;
+    border-radius: 20px;
+    color: black;
+    cursor: pointer;
 }
