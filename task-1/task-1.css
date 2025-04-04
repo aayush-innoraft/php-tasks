@@ -1,0 +1,94 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    color: black;
+  }
+
+  body {
+    background-color: blue;
+    width: 100%;
+    height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    overflow: hidden;
+  }
+
+  form {
+    background: white;
+    padding: 20px;
+    border-radius: 10px;
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+  }
+
+  .input-group {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    padding: 20px;
+  }
+
+  input {
+    padding: 8px;
+    border-radius: 5px;
+    border: 1px solid #ccc;
+    width: 200px;
+  }
+
+  .submit {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+
+  .submit button {
+    padding: 10px;
+    background-color: transparent;
+    font-size: 20px;
+    width: 80%;
+    background-color: blue;
+    border: 1px solid white;
+    color: white;
+    cursor: pointer;
+  }
+
+  .ends {
+    display: flex;
+    flex-direction: column;
+  }
+
+  .ends input {
+    background-color: white;
+  }
+
+  .form-two {
+    background-color: transparent;
+  }
+
+  #form {
+    margin-left: 100px;
+  }
+
+  #tablebtn {
+    padding: 10px;
+    color: white;
+    font-size: 18px;
+    background-color: blue;
+  }
+
+  .phone {
+    display: flex;
+    gap: 10px;
+    align-items: center;
+    margin-left: 15px;
+  }
+
+  .email {
+    display: flex;
+    gap: 10px;
+    align-items: center;
+    margin-left: 15px;
+  }
