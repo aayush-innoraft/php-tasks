@@ -20,8 +20,30 @@ if (!isset($_SESSION["login"]) || $_SESSION["login"] == false) {
   <!-- jquery -->
   <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
 
-  <script src="./src/index.js"></script>
 
+  <script>
+    $(document).ready(function() {
+      $("#first_name, #last-name").on("input", function() {
+        var fname = $("#first_name").val();
+        var lname = $("#last-name").val();
+        $("#fullname").val(fname + " " + lname);
+        if (fname.length > 15 || lname.length > 15) {
+          exceeds();
+          $("#first_name").val("");
+          $("#last-name").val("");
+          $("#fullname").val("");
+        }
+      });
+      $("#button").on("click", function() {
+        location.reload();
+      });
+
+      function exceeds() {
+        alert("Wrong input! Name should be less than 15 characters.");
+      }
+
+    });
+  </script>
   <!-- styles -->
   <link rel="stylesheet" href="/alltasks/css/style.css">
 
@@ -44,7 +66,6 @@ if (!isset($_SESSION["login"]) || $_SESSION["login"] == false) {
       </nav>
     </div>
   </header>
-
   <main>
     <!-- main section -->
     <section class="all-tasks">
@@ -52,9 +73,9 @@ if (!isset($_SESSION["login"]) || $_SESSION["login"] == false) {
         <div class="all-tasks-wrapper">
           <?php
           // autoloader function to include classes 
-          spl_autoload_register(function ($class) {
-            include "./classes/" . $class . ".php";
-          });
+          // spl_autoload_register(function ($class) {
+          //   include "./classes/" . $class . ".php";
+          // });
 
           // refine incomming data
           function datarefine($data)
