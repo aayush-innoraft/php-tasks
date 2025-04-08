@@ -1,16 +1,19 @@
 <?php
-include("./backend4.php")
+include("./backend4.php");
+// include("task7.php");
+// Task7::checkAuth();
+
 ?>
 <!DOCTYPE html>
 <html lang="en">
 
 <head>
     <title>Document</title>
-    <link rel="stylesheet" href="../css/task-4.css">
+    <link rel="stylesheet" href="/alltasks/css/task-4.css">
 </head>
 
 <body>
-    <form action="task-4.php" method="POST" enctype="multipart/form-data">
+<form method="post" action="<?php echo htmlspecialchars($_SERVER["PHP_SELF"]) . "?q=4";?>" enctype="multipart/form-data">
         <div class="input-group">
             <p>First name:</p>
             <input type="text" name="first-name" id="first_name">

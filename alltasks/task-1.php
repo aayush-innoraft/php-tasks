@@ -1,4 +1,7 @@
 <?php
+// require_once 'task7.php';
+// Task7::checkAuth(); 
+include("../task7/questions.php");
 if ($_SERVER["REQUEST_METHOD"] == "POST") {
     // Handling name input
     if (isset($_POST["first-name"]) && isset($_POST["last-name"])) {
@@ -19,11 +22,11 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
-    <link rel="stylesheet" href="../css/task-1.css">
+    <link rel="stylesheet" href="/alltasks/css/task-1.css">
 </head>
 
 <body>
-    <form action="task-1.php" method="POST" enctype="multipart/form-data">
+<form method="post" action="<?php echo htmlspecialchars($_SERVER["PHP_SELF"]) . "?q=1";?>" enctype="multipart/form-data">
         <div class="input-group">
             <p>First name:</p>
             <input type="text" name="first-name" id="first_name">

@@ -1,4 +1,7 @@
 <?php
+// require_once 'task7.php';
+// Task7::checkAuth(); 
+
 if ($_SERVER["REQUEST_METHOD"] == "POST") {
     $firstName = trim($_POST["first-name"]);
     $lastName = trim($_POST["last-name"]);
@@ -23,7 +26,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
   <link rel="stylesheet" href="../css/task-6.css">
 </head>
 <body>
-  <form action="task-6.php" method="POST" enctype="multipart/form-data">
+<form method="post" action="<?php echo htmlspecialchars($_SERVER["PHP_SELF"]) . "?q=6";?>" enctype="multipart/form-data">
     <div class="input-group">
       <p>First name:</p>
       <input type="text" name="first-name" id="first_name" maxlength="15">

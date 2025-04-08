@@ -1,6 +1,8 @@
 <?php
 
-include("./backend5.php")
+include("./backend5.php");
+// require_once 'task7.php';
+// Task7::checkAuth(); 
 ?>
 <!DOCTYPE html>
 <html lang="en">
@@ -11,7 +13,7 @@ include("./backend5.php")
 </head>
 
 <body>
-  <form action="task-5.php" method="POST" enctype="multipart/form-data">
+<form method="post" action="<?php echo htmlspecialchars($_SERVER["PHP_SELF"]) . "?q=5";?>" enctype="multipart/form-data">
     <div class="input-group">
       <p>First name:</p>
       <input type="text" name="first-name" id="first_name">

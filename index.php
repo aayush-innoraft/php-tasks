@@ -1,53 +1,111 @@
 <?php
+// start of session
 session_start();
-
-// Handle logout request
-if ($_SERVER["REQUEST_METHOD"] == "POST") {
-    if (isset($_POST["logout"])) {
-        session_unset();
-        session_destroy();
-        header("Location: http://www.php-1.com/task7/task7.php");
-        exit();
-    }
+// check if user is logged in session or not
+if (!isset($_SESSION["login"]) || $_SESSION["login"] == false) {
+  //  redirect to login.php
+  header('Location: login.php');
+  exit();
 }
 ?>
 
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>All tasks</title>
-  <link rel="stylesheet" href="./css/style.css" />
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Php Basics</title>
+
+  <!-- jquery -->
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+
+  <script src="./src/index.js"></script>
+
+  <!-- styles -->
+  <link rel="stylesheet" href="/alltasks/css/style.css">
+
 </head>
+
 <body>
+  <!-- navigation bar to move arround pages -->
+  <header>
+    <div class="container">
+      <nav>
+        <ul>
+          <li><a href="./index.php?q=1">task 1</a></li>
+          <li><a href="./index.php?q=2">task 2</a></li>
+          <li><a href="./index.php?q=3">task 3</a></li>
+          <li><a href="./index.php?q=4">task 4</a></li>
+          <li><a href="./index.php?q=5">task 5</a></li>
+          <li><a href="./index.php?q=6">task 6</a></li>
+          <li><a href="./logout.php">Logout</a></li>
+        </ul>
+      </nav>
+    </div>
+  </header>
 
-  <div class="welcome">
-    <p>
-      <?php
-      if (isset($_SESSION["username"])) {
-          echo "Welcome " . $_SESSION["username"];
-      } else {
-          echo "Welcome Guest";
-      }
-      ?>
-    </p>
-  </div>
+  <main>
+    <!-- main section -->
+    <section class="all-tasks">
+      <div class="container">
+        <div class="all-tasks-wrapper">
+          <?php
+          // autoloader function to include classes 
+          spl_autoload_register(function ($class) {
+            include "./classes/" . $class . ".php";
+          });
 
-  <div class="container">
-    <a href="./task-1/task-1.php">Task 1</a>
-    <a href="./task-2/task-2.php">Task 2</a>
-    <a href="./task-3/task-3.php">Task 3</a>
-    <a href="./task-4/task-4.php">Task 4</a>
-    <a href="./task-5/task-5.php">Task 5</a>
-    <a href="./task-6/task-6.php">Task 6</a>
-    <a href="./task7/task7.php">Task 7</a>
-  </div>
+          // refine incomming data
+          function datarefine($data)
+          {
+            $data = trim($data);
+            $data = stripslashes($data);
+            $data = htmlspecialchars($data);
+            return $data;
+          }
 
-  <!-- Logout button inside a form -->
-  <form method="POST" style="margin-top: 20px; text-align: center;">
-    <button type="submit" name="logout">Logout</button>
-  </form>
+          if (!isset($_GET['q'])) {
+            $_GET['q'] = 0;
+          }
+
+          // different cases to include different tasks
+          switch ($_GET['q']) {
+
+            case 1:
+              include "./alltasks/task-1.php";
+              break;
+
+            case 2:
+              include "./alltasks/task-2.php";
+              break;
+
+            case 3:
+              include "./alltasks/task-3.php";
+              break;
+
+            case 4:
+              include "./alltasks/task-4.php";
+              break;
+
+            case 5:
+              include "./alltasks/task-5.php";
+              break;
+
+            case 6:
+              include "./alltasks/task-6.php";
+              break;
+
+            default:
+              include "./index.php";
+              break;
+          }
+          ?>
+        </div>
+      </div>
+    </section>
+  </main>
 
 </body>
+
 </html>
