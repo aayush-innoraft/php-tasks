@@ -1,6 +1,7 @@
 <?php
 // require_once 'task7.php';
-// Task7::checkAuth(); 
+// Task7::checkAuth();
+session_start(); 
 include("../task7/questions.php");
 if ($_SERVER["REQUEST_METHOD"] == "POST") {
     // Handling name input

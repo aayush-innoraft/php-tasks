@@ -31,7 +31,7 @@ if (isset($_SESSION["login"]) && $_SESSION["login"]) {
 
     $username = $_POST['username'];
     $password = $_POST['password'];
-
+    
     // Validate credentials
     if ($username == 'user' && $password == 'user123') {
       $_SESSION['login'] = true;
@@ -43,6 +43,7 @@ if (isset($_SESSION["login"]) && $_SESSION["login"]) {
       $err = "<br><br><p style='color:red;'>Invalid username or password</p>";
     }
   }
+  $_SESSION['q'] = $_GET['q'];
 
   ?>
 

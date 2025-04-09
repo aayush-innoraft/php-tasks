@@ -72,10 +72,7 @@ if (!isset($_SESSION["login"]) || $_SESSION["login"] == false) {
       <div class="container">
         <div class="all-tasks-wrapper">
           <?php
-          // autoloader function to include classes 
-          // spl_autoload_register(function ($class) {
-          //   include "./classes/" . $class . ".php";
-          // });
+
 
           // refine incomming data
           function datarefine($data)
@@ -89,10 +86,14 @@ if (!isset($_SESSION["login"]) || $_SESSION["login"] == false) {
           if (!isset($_GET['q'])) {
             $_GET['q'] = 0;
           }
+          if (isset($_SESSION['q'])) {
+            $_GET['q'] = $_SESSION['q'];
+            unset($_SESSION['q']);
+          }
 
           // different cases to include different tasks
           switch ($_GET['q']) {
-
+                 
             case 1:
               include "./alltasks/task-1.php";
               break;
