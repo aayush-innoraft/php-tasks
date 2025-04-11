@@ -1,22 +1,27 @@
+/* initially setting the margin padding to 0  */
 * {
     margin: 0;
     padding: 0;
 }
 
+/* styling body  */
 body {
     font-family: Arial, sans-serif;
     background-color: #f2f2f2;
     display: flex;
     align-items: center;
-    justify-content: center;
     height: 100vh;
     margin: 0;
 }
+
+/* welcome stylings  */
 .welcome{
     position: absolute;
     top: 100px;
     left: 100px;
 }
+
+/* form stylings  */
 form {
     background-color: #fff;
     padding: 30px 40px;
@@ -27,6 +32,8 @@ form {
     display: flex;
     flex-direction: column;
 }
+
+/* ancher tag stylings  */
  a{
     text-decoration: none;
     font-size: 30px;
@@ -36,6 +43,9 @@ form {
     border-radius: 20px;
 
 }
+
+/* input type text 
+and input type password stylings  */
 input[type="text"],
 input[type="password"] {
     padding: 12px;
@@ -45,6 +55,7 @@ input[type="password"] {
     font-size: 16px;
 }
 
+/* buttons stylings  */
 button {
     padding: 12px;
     background-color: #007bff;
@@ -56,24 +67,31 @@ button {
     transition: background-color 0.3s ease;
 }
 
+/* button hover  */
 button:hover {
     background-color: #0056b3;
 }
 
+/* para tag stylings  */
 p {
     text-align: center;
     margin-bottom: 20px;
 }
+
+/* container  */
 .container{
     display: flex;
     align-items: center;
     justify-content: center;
     flex-direction: column;
-    gap: 10px
-    ;
+    gap: 10px;
+
 }
+
+/* nav ul and li stylings  */
 nav ,ul , li {
     display: flex;
     flex-direction: column;
     gap: 20px;
+    margin-left: 100px;  
 }

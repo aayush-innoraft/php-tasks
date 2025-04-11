@@ -1,0 +1,11 @@
+{
+    "name": "aayush/php-1",
+    "autoload": {
+        "psr-4": {
+            "Aayush\\Php1\\": "src/"
+        }
+    },
+    "require": {
+        "phpmailer/phpmailer": "^6.9"
+    }
+}

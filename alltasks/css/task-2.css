@@ -1,3 +1,7 @@
+/* task two css 
+ */
+
+ /* initially setting margin padding to 0; */
 * {
   margin: 0;
   padding: 0;
@@ -5,6 +9,7 @@
   color: black;
 }
 
+/* body stylings  */
 body {
   background-color: blue;
   width: 100%;
@@ -15,6 +20,7 @@ body {
   overflow: hidden;
 }
 
+/* from stylings  */
 form {
   background: white;
   padding: 20px;
@@ -24,6 +30,7 @@ form {
   gap: 10px;
 }
 
+/* input group stylings  */
 .input-group {
   display: flex;
   align-items: center;
@@ -31,6 +38,7 @@ form {
   padding: 20px;
 }
 
+/* input stylings  */
 input {
   padding: 8px;
   border-radius: 5px;
@@ -38,12 +46,14 @@ input {
   width: 200px;
 }
 
+/* submit button stylings  */
 .submit {
   display: flex;
   align-items: center;
   justify-content: center;
 }
 
+/* submit button stylings  */
 .submit button {
   padding: 10px;
   background-color: transparent;
@@ -55,23 +65,28 @@ input {
   cursor: pointer;
 }
 
+/* end div stylings  */
 .ends {
   display: flex;
   flex-direction: column;
 }
 
+/* end input stylings  */
 .ends input {
   background-color: white;
 }
 
+/* form two stylings  */
 .form-two {
   background-color: transparent;
 }
 
+/* form two stylings  */
 #form {
   margin-left: 100px;
 }
 
+/* table button stylings  */
 #tablebtn {
   padding: 10px;
   color: white;
@@ -79,6 +94,7 @@ input {
   background-color: blue;
 }
 
+/* phone stylings  */
 .phone {
   display: flex;
   gap: 10px;
@@ -86,6 +102,7 @@ input {
   margin-left: 15px;
 }
 
+/* email styling.  */
 .email {
   display: flex;
   gap: 10px;
